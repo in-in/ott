@@ -1,0 +1,10 @@
+include /../node_modules/bemto.pug/bemto.pug
+include ../page/page.pug
+
+- set_bemto_settings({ modifier: '--' })
+
+doctype html
+html(lang='ru')
+  include ../head/head.pug
+  +page()
+    block content
