@@ -2,4 +2,4 @@
   --mainColor: hotpink;
 }
 
-@custom-media --l (width <= 960px)
+@custom-media --700 (width >= 700px)

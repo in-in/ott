@@ -1,0 +1,17 @@
+include ../icon/icon.pug
+include ../menu/menu.pug
+
+mixin header()
+  +b.HEADER.header
+    +e.logo
+      +icon('sd')
+    +e.menu
+      +menu([
+      {text: 'Авиабилеты'},
+      {text: 'Отели'},
+      {text: 'Поезда'},
+      {text: 'Перелет + отель'},
+      {text: 'Авто'},
+      {text: 'Туры'},
+      {text: 'Бонусы'},
+      ])

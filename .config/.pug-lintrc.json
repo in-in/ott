@@ -1,4 +1,8 @@
 {
+  "excludeFiles": [
+    "src/blocks/svg-sprite/*",
+    "src/blocks/icon/*"
+  ],
   "disallowAttributeConcatenation": null,
   "disallowAttributeInterpolation": true,
   "disallowBlockExpansion": null,

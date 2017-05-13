@@ -1,7 +1,3 @@
-# Newla
-
-A tiny `npm-scripts-driven` project template for small tasks in HTML and CSS.
-
 ### Get your copy
 
 ```bash

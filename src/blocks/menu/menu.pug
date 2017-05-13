@@ -1,0 +1,7 @@
+mixin menu(list)
+  +b.NAV.menu()&attributes(attributes)
+    +e.A.toggle(href='#menu') menu
+    +e.UL.list.cf
+      each item in list
+        +e.LI.item
+          +e.A.link(href='#x')!= item.text

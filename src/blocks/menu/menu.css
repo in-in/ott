@@ -1,0 +1,40 @@
+.menu {
+  position: relative;
+  background-color: pink;
+
+  &__toggle {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: skyblue;
+
+    @media (--700) {
+      display: none;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    background-color: pink;
+
+    @media (--700) {
+      position: static;
+      display: block;
+    }
+  }
+
+  &__item {
+    padding: 5px;
+    /* border: 1px solid green;
+    background-color: tan; */
+    text-transform: uppercase;
+
+    @media (--700) {
+      float: left;
+    }
+  }
+}

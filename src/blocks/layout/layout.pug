@@ -1,4 +1,5 @@
 include /../node_modules/bemto.pug/bemto.pug
+include ../script/script.pug
 include ../page/page.pug
 
 - set_bemto_settings({ modifier: '--' })
@@ -8,3 +9,7 @@ html(lang='ru')
   include ../head/head.pug
   +page()
     block content
+    +script([
+      'https://code.jquery.com/jquery-3.2.1.min.js',
+      'script.js'
+    ])

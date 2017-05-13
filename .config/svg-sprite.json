@@ -1,0 +1,25 @@
+{
+  "shape": {
+    "id": {
+      "generator": "icon-"
+    }
+  },
+  "transform": [
+    {
+      "svgo": {
+        "plugins": [
+          {
+            "removeRasterImages": true
+          }
+        ]
+      }
+    }
+  ],
+  "mode": {
+    "symbol": {
+      "dest": ".",
+      "sprite": "src/blocks/svg-sprite/svg-sprite.pug",
+      "inline": true
+    }
+  }
+}

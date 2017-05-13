@@ -16,6 +16,7 @@
     "build:js": "cp src/scripts/script.js dist/",
     "image": "npm-run-all image:*",
     "image:optim": "imagemin src/assets/images/* --out-dir=dist/assets/images",
+    "image:svg": "svg-sprite -C .config/svg-sprite.json src/assets/svg/*.svg",
     "lint": "npm-run-all lint:*",
     "lint:pug": "pug-lint -c .config/.pug-lintrc.json src/",
     "lint:css": "stylelint 'src/**/*.css' -i $npm_package_config_stylelintignore --config $npm_package_config_stylelint",
@@ -23,7 +24,8 @@
     "watch:pug": "chokidar 'src/**/*.pug' -c 'npm run build:pug'",
     "watch:css": "chokidar 'src/**/*.css' -i 'src/styles/lib' -c 'npm run build:css'",
     "watch:js": "chokidar 'src/scripts/*.js' -c 'npm run build:js'",
-    "watch:image": "chokidar 'src/assets/images/*' -c 'npm run image'",
+    "watch:image": "chokidar 'src/assets/images/*' -c 'npm run image:optim'",
+    "watch:svg": "chokidar 'src/assets/svg/*.svg' -c 'npm run image:svg'",
     "serve": "browser-sync start -c .config/bs-config.js -s 'dist' -f 'dist'",
     "ncu": "ncu"
   },
@@ -51,6 +53,7 @@
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.4.0",
     "rimraf": "^2.6.1",
-    "stylelint": "^7.10.1"
+    "stylelint": "^7.10.1",
+    "svg-sprite": "^1.3.6"
   }
 }

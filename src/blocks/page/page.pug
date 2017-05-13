@@ -1,4 +1,4 @@
 mixin page()
-  body
-    .page&attributes(attributes)
-      block
+  body.page&attributes(attributes)
+    include ../svg-sprite/svg-sprite.pug
+    block
