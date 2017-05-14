@@ -1,6 +1,13 @@
 .section-title {
-  margin: 0;
-  color: var(--sectionTitle);
+  margin-top: 0;
+  margin-bottom: 2.5em; /* 50/20 */
+  color: var(--textDark);
   text-align: center;
+  font-weight: 400;
   font-size: 1.25em; /* 20/16 */
+
+  @media (--1050) {
+    margin-bottom: 2.333em; /* 70/30 */
+    font-size: 1.875em; /* 30/16 */
+  }
 }

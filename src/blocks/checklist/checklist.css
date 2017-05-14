@@ -3,10 +3,11 @@
     position: relative;
     margin-bottom: 2em; /* 26/13 */
     padding-left: 1.538em; /* 20/13 */
-    color: var(--checklistItem);
+    color: var(--colorMediumDark);
     font-size: .813em; /* 13/16 */
 
     @media (--1050) {
+      margin-bottom: 1.563em; /* 25/16 */
       font-size: 1em;
     }
 
@@ -21,7 +22,7 @@
     left: 0;
     width: .923em; /* 12/13 */
     height: .692em; /* 9/13 */
-    fill: var(--checklistItem);
+    fill: var(--colorMediumDark);
 
     @media (--1050) {
       width: 1em; /* 16/16 */

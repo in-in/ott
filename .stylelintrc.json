@@ -346,7 +346,7 @@
 
     "indentation": 2,
     "max-empty-lines": 1,
-    "max-nesting-depth": 3,
+    "max-nesting-depth": 4,
     "no-duplicate-selectors": true,
     "no-empty-source": true,
     "no-eol-whitespace": true,

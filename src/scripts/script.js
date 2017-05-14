@@ -26,4 +26,11 @@ $( document ).ready(function() {
         }
       });
     });
+    // tabs
+    var $buttonTab = $('.button--tab');
+    
+    $buttonTab.click(function(e) {
+      e.preventDefault();
+      $(this).addClass('button--tab-active').siblings().removeClass('button--tab-active');
+    });
 });

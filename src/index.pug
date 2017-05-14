@@ -4,14 +4,96 @@ include blocks/header/header.pug
 include blocks/section/section.pug
 include blocks/section-title/section-title.pug
 include blocks/checklist/checklist.pug
+include blocks/button/button.pug
+include blocks/card/card.pug
+include blocks/info/info.pug
 
 block content
   +header()
   +section()
     +section-title('Заголовок')
-    +checklist([
-      'Кэшбэк 1% со&nbsp;всех покупок и&nbsp;до&nbsp;10% с покупок в&nbsp;&laquo;любимых местах&raquo;',
-      'А&nbsp;также баллы при покупке в&nbsp;приложении'
-    ])
-    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate nihil id veritatis debitis tempore tempora harum optio eum. Suscipit rerum doloribus natus omnis placeat officiis vel est, dicta cum.
-  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis beatae placeat laborum sint sit, libero inventore pariatur impedit incidunt consequatur suscipit, deleniti accusamus voluptatem eos, eveniet? Dolorem cum tenetur doloribus.
+    +e.checklist
+      +checklist([
+        'Кэшбэк 1% со&nbsp;всех покупок и&nbsp;до&nbsp;10% с покупок в&nbsp;&laquo;любимых местах&raquo;',
+        'А&nbsp;также баллы при покупке в&nbsp;приложении'
+      ])
+    +e.tabs
+      +button('В приложении').--tab.--tab-left.--tab-active
+      +button('На сайте').--tab.--tab-right
+    +e.cashback-price
+      - 
+        var cashback = [
+          {
+            icon: 'cashback1',
+            title: '4%',
+            desc: 'на авиабилеты'
+          },{
+            icon: 'cashback2',
+            title: '5%',
+            desc: 'на ж/д билеты'
+          },{
+            icon: 'cashback3',
+            title: ['до ', '8%'],
+            desc: 'на отели'
+          }]
+      each item in cashback
+        +e.col
+          +card({
+            icon: item.icon,
+            title: item.title,
+            desc: item.desc
+          }).--cashback
+    +e.action
+      +button('Заказать').--action
+    +e.info
+      +info()
+  +section().--bright
+    +section-title('Заголовок 2')
+    +e.features
+      - 
+        var features1 = [
+          {
+            icon: 'feature1',
+            title: 'Пункт 1',
+            desc: 'Описание 1'
+          },{
+            icon: 'feature2',
+            title: 'Пункт 2',
+            desc: 'Описание 2'
+          },{
+            icon: 'feature3',
+            title: 'Пункт 3',
+            desc: 'Описание 3'
+          }]
+      each item in features1
+        +e.col.--feature
+          +card({
+            icon: item.icon,
+            title: item.title,
+            desc: item.desc
+          }).--feature
+    +e.features
+      - 
+        var features2 = [
+          {
+            icon: 'feature4',
+            title: 'Пункт 4',
+            desc: 'Описание 4'
+          },{
+            icon: 'feature5',
+            title: 'Пункт 5',
+            desc: 'Описание 5'
+          },{
+            icon: 'feature6',
+            title: 'Пункт 6',
+            desc: 'Описание 6'
+          }]
+      each item in features2
+        +e.col.--feature
+          +card({
+            icon: item.icon,
+            title: item.title,
+            desc: item.desc
+          }).--feature
+    +e.action
+      +button('Подробнее').--action

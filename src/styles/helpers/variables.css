@@ -1,9 +1,16 @@
 :root {
   --bgHeader: #373737;
-  --checklistItem: #424242;
+  --buttonTab: #e0e0e0;
+  --colorAccent: #01abfb;
+  --colorAccentHover: color(var(--colorAccent) l(45%));
   --colorDark: #212121;
   --colorDarkHover: color(var(--colorDark) l(30%));
-  --sectionTitle: #2c2c2c;
+  --colorInfo: #ed4930;
+  --colorMain: #ffd41e;
+  --colorMediumDark: #424242;
+  --textDark: #2c2c2c;
 }
 
-@custom-media --1050 (width >= 1050px)
+@custom-media --1050 (width >= 1050px);
+
+@custom-media --800 (width >= 800px);

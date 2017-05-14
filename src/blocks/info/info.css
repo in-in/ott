@@ -1,0 +1,26 @@
+.info {
+  position: relative;
+  max-width: 440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1.563em; /* 25/16 */
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .938em; /* 15/16 */
+    height: .938em; /* 15/16 */
+    fill: var(--colorInfo);
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--colorDark);
+    font-size: .75em; /* 12/16 */
+
+    @media (--1050) {
+      font-size: .875em; /* 14/16 */
+    }
+  }
+}
