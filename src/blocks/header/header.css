@@ -1,3 +1,45 @@
 .header {
-  background-color: tan;
+
+  @media (--1050) {
+    height: 4.563em; /* 73/16 */
+    background-color: var(--bgHeader);
+  }
+
+  &__container {
+    display: table;
+    max-width: 80em; /* 1280/16 */
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (--1050) {
+    padding-right: 2.5em; /* 40/16 */
+    padding-left: 2.5em; /* 40/16 */
+  }
+
+  &__section {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__logo {
+    display: none;
+
+    @media (--1050) {
+      display: table-cell;
+    }
+  }
+
+  &__menu {
+    position: relative;
+    width: 100%;
+    padding-right: .563em;
+    padding-left: .563em;
+
+    @media (--1050) {
+      width: auto;
+    }
+  }
 }

@@ -1,0 +1,6 @@
+.section-title {
+  margin: 0;
+  color: var(--sectionTitle);
+  text-align: center;
+  font-size: 1.25em; /* 20/16 */
+}

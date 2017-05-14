@@ -1,7 +1,24 @@
+include ../icon/icon.pug
+include ../button/button.pug
+
 mixin menu(list)
   +b.NAV.menu()&attributes(attributes)
-    +e.A.toggle(href='#menu') menu
+    +e.A.toggle(href='#menu', title='Menu')
+      +e.SPAN.toggle-inner
     +e.UL.list.cf
       each item in list
-        +e.LI.item
-          +e.A.link(href='#x')!= item.text
+        if item.submenu
+          +e.LI.item.__item-more
+            +e.A.link.__link-more(href='#x')
+              +icon('more', 20, 4)
+            +e.UL.submenu
+              each subitem in item.submenu
+                +e.LI.item.__item-submenu
+                  +e.A.link.__link-submenu(href='#x')!= subitem.text
+        else if item.account
+          +e.LI.item.__item-account
+            each value in item.account
+              +button(value.text)&attributes({'class': '--account-' + value.class}).--account
+        else
+          +e.LI.item
+            +e.A.link(href='#x')!= item.text

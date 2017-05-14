@@ -1,3 +1,18 @@
 @import '../header/header.css';
 
 @import '../menu/menu.css';
+
+@import '../logo/logo.css';
+
+@import '../button/button.css';
+
+@import '../section/section.css';
+
+@import '../section-title/section-title.css';
+
+@import '../checklist/checklist.css';
+
+.page {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}

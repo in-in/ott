@@ -1,0 +1,8 @@
+include ../icon/icon.pug
+
+mixin checklist(list)
+  +b.UL.checklist&attributes(attributes)
+    each item in list
+      +e.LI.item
+        +icon('check', 12, 9).__icon
+        != item

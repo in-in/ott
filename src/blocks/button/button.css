@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  height: 2em; /* 32/16 */
+  border-radius: 2px;
+  text-decoration: none;
+  line-height: 2em; /* 32/16 */
+
+  &--account {
+    margin-right: .188em; /* 3/16 */
+    margin-left: .188em; /* 3/16 */
+    padding-right: .938em; /* 15/16 */
+    padding-left: .938em; /* 15/16 */
+    color: #fff;
+    text-transform: uppercase;
+
+    ^&__text {
+      font-size: .875em; /* 14/16 */
+    }
+  }
+
+  &--account-signin {
+    border: 1px solid #c6c6c6;
+    transition: border-color .2s;
+
+    &:hover,
+    &:focus {
+      border-color: #fff;
+    }
+  }
+
+  &--account-order {
+    border: 1px solid transparent;
+    transition: background-color .2s;
+
+    &:hover,
+    &:focus {
+      background-color: var(--colorDarkHover);
+    }
+  }
+}

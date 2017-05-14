@@ -1,0 +1,31 @@
+.checklist {
+  &__item {
+    position: relative;
+    margin-bottom: 2em; /* 26/13 */
+    padding-left: 1.538em; /* 20/13 */
+    color: var(--checklistItem);
+    font-size: .813em; /* 13/16 */
+
+    @media (--1050) {
+      font-size: 1em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: .2em;
+    left: 0;
+    width: .923em; /* 12/13 */
+    height: .692em; /* 9/13 */
+    fill: var(--checklistItem);
+
+    @media (--1050) {
+      width: 1em; /* 16/16 */
+      height: .813em; /* 13/16 */
+    }
+  }
+}

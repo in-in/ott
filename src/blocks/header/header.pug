@@ -1,17 +1,38 @@
-include ../icon/icon.pug
+include ../logo/logo.pug
 include ../menu/menu.pug
 
 mixin header()
   +b.HEADER.header
-    +e.logo
-      +icon('sd')
-    +e.menu
-      +menu([
-      {text: 'Авиабилеты'},
-      {text: 'Отели'},
-      {text: 'Поезда'},
-      {text: 'Перелет + отель'},
-      {text: 'Авто'},
-      {text: 'Туры'},
-      {text: 'Бонусы'},
-      ])
+    +e.container.cf
+      +e.section.__logo
+        +logo()
+      +e.section.__menu
+        +menu([
+          {text: 'Авиабилеты'},
+          {text: 'Отели'},
+          {text: 'Поезда'},
+          {text: 'Перелет + отель'},
+          {text: 'Авто'},
+          {text: 'Туры'},
+          {text: 'Бонусы'},
+          {
+            submenu: [
+              {text: 'Lorem'},
+              {text: 'ipsum'},
+              {text: 'consectetur'},
+              {text: 'adipisicing'}
+            ]
+          },
+          {
+            account: [
+              {
+                class: 'order',
+                text: 'Мой заказ'
+              },
+              {
+                class: 'signin',
+                text: 'Войти'
+              }
+            ]
+          }
+        ])

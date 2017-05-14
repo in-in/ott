@@ -14,10 +14,6 @@ html {
   box-sizing: inherit;
 }
 
-.page {
-  margin: 0;
-}
-
 article,
 aside,
 details,
@@ -92,4 +88,14 @@ ol {
   display: table;
   clear: both;
   content: '';
+}
+
+.sr {
+  position: absolute;
+  display: block;
+  width: .008em;
+  height: .008em;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
 }

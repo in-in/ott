@@ -1,5 +1,9 @@
 :root {
-  --mainColor: hotpink;
+  --bgHeader: #373737;
+  --checklistItem: #424242;
+  --colorDark: #212121;
+  --colorDarkHover: color(var(--colorDark) l(30%));
+  --sectionTitle: #2c2c2c;
 }
 
-@custom-media --700 (width >= 700px)
+@custom-media --1050 (width >= 1050px)

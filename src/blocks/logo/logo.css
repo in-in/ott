@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  line-height: 0;
+
+  & svg {
+    width: 3em; /* 48/16 */
+    height: 3em; /* 48/16 */
+  }
+}
