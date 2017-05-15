@@ -90,7 +90,7 @@ ol {
   content: '';
 }
 
-.sr {
+/* .sr {
   position: absolute;
   display: block;
   width: .008em;
@@ -98,4 +98,4 @@ ol {
   overflow: hidden;
   text-indent: 200%;
   white-space: nowrap;
-}
+} */
