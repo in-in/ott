@@ -4,5 +4,8 @@ mixin checklist(list)
   +b.UL.checklist&attributes(attributes)
     each item in list
       +e.LI.item
+        != item.text
         +icon('check', 12, 9).__icon
-        != item
+        if item.note
+          +e.note.tooltip(data-tooltip=item.note)
+            +icon('info', 15, 15)

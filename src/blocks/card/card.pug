@@ -4,10 +4,8 @@ mixin card(data)
   +b.card&attributes(attributes)
     +e.icon
       +icon(data.icon, 94, 82)
-    +e.P.title
-      if typeof(data.title) === 'string'
-        != data.title
-      else
-        +e.SPAN.title-small!= data.title[0]
-        != data.title[1]
+    +e.P.title(data-type=data.type)!= data.title
     +e.P.desc!= data.desc
+      if data.note
+        +e.SPAN.note.tooltip(data-tooltip!=data.note)
+          +icon('info', 15, 15)

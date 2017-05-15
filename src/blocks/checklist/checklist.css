@@ -29,4 +29,15 @@
       height: .813em; /* 13/16 */
     }
   }
+
+  &__note {
+    display: inline-block;
+
+    & svg {
+      width: .938em; /* 15/16 */
+      height: .938em; /* 15/16 */
+      margin-left: 1em;
+      fill: var(--colorMediumDark);
+    }
+  }
 }

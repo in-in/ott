@@ -16,6 +16,8 @@
 
 @import '../info/info.css';
 
+@import '../tooltip/tooltip.css';
+
 .page {
   margin: 0;
   font-family: Roboto, sans-serif;

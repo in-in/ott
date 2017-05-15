@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
     //menu
     var $menuToggle = $('.menu__toggle');
     var $menuList = $('.menu__list');
@@ -28,9 +28,33 @@ $( document ).ready(function() {
     });
     // tabs
     var $buttonTab = $('.button--tab');
+    var inApp = {
+      aero: '4%',
+      train: '5%',
+      hotel: '8%'
+    };
+    var inSite = {
+      aero: '5%',
+      train: '7%',
+      hotel: '9%'
+    };
+    
+    function changePrice(id) {
+      var priceType = ['aero', 'train', 'hotel'];
+      for(var i = 0; i < priceType.length; i++) {
+        if(id === 'inSite')
+          $('[data-type='+ priceType[i] +']').text(inSite[priceType[i]]);
+        else if (id === 'inApp')
+          $('[data-type='+ priceType[i] +']').text(inApp[priceType[i]]);
+      }
+    }
     
     $buttonTab.click(function(e) {
       e.preventDefault();
-      $(this).addClass('button--tab-active').siblings().removeClass('button--tab-active');
+      $this = $(this);
+
+      changePrice($this.attr('id'));
+      
+      $this.addClass('button--tab-active').siblings().removeClass('button--tab-active');
     });
 });

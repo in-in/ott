@@ -14,26 +14,32 @@ block content
     +section-title('Заголовок')
     +e.checklist
       +checklist([
-        'Кэшбэк 1% со&nbsp;всех покупок и&nbsp;до&nbsp;10% с покупок в&nbsp;&laquo;любимых местах&raquo;',
-        'А&nbsp;также баллы при покупке в&nbsp;приложении'
+        {
+          text: 'Кэшбэк 1% со&nbsp;всех покупок и&nbsp;до&nbsp;10% с покупок в&nbsp;&laquo;любимых местах&raquo;',
+          note: 'Вы можете выбрать 3 «любимых» мест в мобильном приложении'
+        },
+        {text: 'А&nbsp;также баллы при покупке в&nbsp;приложении'}
       ])
     +e.tabs
-      +button('В приложении').--tab.--tab-left.--tab-active
-      +button('На сайте').--tab.--tab-right
+      +button('В приложении').--tab.--tab-left.--tab-active#inApp
+      +button('На сайте').--tab.--tab-right#inSite
     +e.cashback-price
       - 
         var cashback = [
           {
             icon: 'cashback1',
             title: '4%',
+            type: 'aero',
             desc: 'на авиабилеты'
           },{
             icon: 'cashback2',
             title: '5%',
+            type: 'train',
             desc: 'на ж/д билеты'
           },{
             icon: 'cashback3',
-            title: ['до ', '8%'],
+            title: '8%',
+            type: 'hotel',
             desc: 'на отели'
           }]
       each item in cashback
@@ -41,6 +47,7 @@ block content
           +card({
             icon: item.icon,
             title: item.title,
+            type: item.type,
             desc: item.desc
           }).--cashback
     +e.action
@@ -78,7 +85,8 @@ block content
           {
             icon: 'feature4',
             title: 'Пункт 4',
-            desc: 'Описание 4'
+            desc: 'Описание 4',
+            note: 'Доставка осуществляется &#13;&#10; по&nbsp;Москве, Санкт‑Петербургу, &#13;&#10; Екатеринбургу, Новосибирску, &#13;&#10; Казани, Нижнему Новгороду, &#13;&#10; Тюмени, Краснодару, Челябинску, &#13;&#10; Красноярску, Ростову-на‑Дону, &#13;&#10; Самаре, Тольятти, Перми, Омску, &#13;&#10; Уфе, Саратову и&nbsp;Иркутску &#13;&#10;'
           },{
             icon: 'feature5',
             title: 'Пункт 5',
@@ -93,7 +101,8 @@ block content
           +card({
             icon: item.icon,
             title: item.title,
-            desc: item.desc
+            desc: item.desc,
+            note: item.note
           }).--feature
     +e.action
       +button('Подробнее').--action

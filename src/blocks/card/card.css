@@ -8,6 +8,15 @@
     margin: 0;
   }
 
+  &__note {
+    margin-left: .813em; /* 13/16 */
+
+    & svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
   &--cashback {
     ^&__icon {
       & svg {
@@ -31,13 +40,14 @@
       font-size: 1.375em; /* 22/16 */
       line-height: 1.5;
 
+      &[data-type=hotel]::before {
+        content: 'до ';
+        font-size: .5em; /* 16/32 */
+      }
+
       @media (--800) {
         font-size: 2em; /* 32/16 */
         line-height: 1;
-      }
-
-      &-small {
-        font-size: .5em; /* 16/32 */
       }
     }
 
