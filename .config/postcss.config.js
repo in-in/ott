@@ -5,7 +5,7 @@ module.exports = {
     require('postcss-nested')({
       bubble: ['each']
     }),
-    require('postcss-custom-properties').default,
+    require('postcss-custom-properties'),
     require('postcss-custom-media')(),
     require('postcss-media-minmax')(),
     require('postcss-each')(),
